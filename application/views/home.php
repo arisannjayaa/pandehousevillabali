@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="<?= base_url('public/assets/css/main/app.css') ?>" />
+	<link rel="stylesheet" href="<?= base_url('public/assets/css/tailwind/output.css') ?>">
 	<title>Pande House Villa Bali</title>
 </head>
 
@@ -103,47 +104,6 @@
 					<span class="visually-hidden">Next</span>
 				</a>
 			</div>
-			<section id="pesan" class="mt-md-0 mt-lg-5 mt-0" style="margin-top: -150px;">
-				<div class="row justify-content-center">
-					<div class="col-12 col-md-8 col-lg-6">
-						<div class="card border border-1 border-primary">
-							<div class="card-content">
-								<form action="<?= base_url('') ?>" method="post">
-									<div class="card-body">
-										<h4 class="card-title mb-3">Temukan Villa</h4>
-										<div class="form-group">
-											<label for="basicInput">Kota Tujuan</label>
-											<input type="text" class="form-control" id="basicInput" placeholder="Badung">
-										</div>
-										<div class="row">
-											<div class="col">
-												<div class="form-group">
-													<label for="basicInput">Check-In</label>
-													<input type="date" class="form-control" id="basicInput" placeholder="Badung">
-												</div>
-											</div>
-											<div class="col">
-												<div class="form-group">
-													<label for="basicInput">Check-Out</label>
-													<input type="date" class="form-control" id="basicInput" placeholder="Badung">
-												</div>
-											</div>
-											<div class="col">
-												<div class="form-group">
-													<label for="basicInput">Durasi</label>
-													<input type="text" class="form-control" id="basicInput" placeholder="Badung">
-												</div>
-											</div>
-
-										</div>
-										<button class="btn btn-primary">Temukan</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 		</div>
 	</div>
 	<script src="<?= base_url('public/assets/js/bootstrap.js') ?>"></script>
