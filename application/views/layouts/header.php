@@ -51,7 +51,7 @@
 								<span>Pemesanan</span>
 							</a>
 						</li>
-						<li class="sidebar-item has-sub <?= (uri_string() == 'villa/data' || uri_string() == 'villa/ketersediaan') ? 'active' : '' ?>">
+						<li class="sidebar-item has-sub <?= (uri_string() == 'villa/data' || uri_string() == 'villa/ketersediaan' || uri_string() == 'villa/add') ? 'active' : ''  ?>">
 							<a href="<?= base_url('villa/data') ?>" class="sidebar-link">
 								<i class="bi bi-house-fill"></i>
 								<span>Villa</span>
