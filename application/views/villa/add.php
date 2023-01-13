@@ -2,29 +2,127 @@
 	<div class="col">
 		<div class="card">
 			<div class="card-body">
-				<form class="form form-horizontal">
+				<form class="form form-vertical">
 					<div class="form-body">
 						<div class="row">
-							<div class="col-md-4">
-								<label>Nama</label>
+							<h4>Villa</h4>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Pande">
+								</div>
 							</div>
-							<div class="col-md-8 form-group">
-								<input type="text" id="nama" class="form-control" name="nama" placeholder="Nama villa">
+							<div class="col-12">
+								<div class="form-group">
+									<label for="harga">Harga</label>
+									<input type="number" id="harga" class="form-control" name="harga" placeholder="1200000">
+								</div>
 							</div>
-							<div class="col-md-4">
-								<label>Harga</label>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_villa">Foto</label>
+									<input type="file" id="foto_villa" class="form-control" name="foto_villa">
+								</div>
 							</div>
-							<div class="col-md-8 form-group">
-								<input type="number" id="harga" class="form-control" name="harga" placeholder="Harga villa">
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
 							</div>
-							<div class="col-md-4">
-								<label>Deskripsi</label>
+							<h4>Fasilitas</h4>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Wifi">
+								</div>
 							</div>
-							<div class="col-md-8 form-group">
-								<textarea class="form-control" id="deskripsi" rows="3"></textarea>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_fasilitas">Foto</label>
+									<input type="file" id="foto_fasilitas" class="form-control" name="foto_fasilitas">
+								</div>
 							</div>
-							<div class="col-sm-12 d-flex justify-content-end">
-								<button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Wifi">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_fasilitas">Foto</label>
+									<input type="file" id="foto_fasilitas" class="form-control" name="foto_fasilitas">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Wifi">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_fasilitas">Foto</label>
+									<input type="file" id="foto_fasilitas" class="form-control" name="foto_fasilitas">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Wifi">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_fasilitas">Foto</label>
+									<input type="file" id="foto_fasilitas" class="form-control" name="foto_fasilitas">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="nama">Nama</label>
+									<input type="text" id="nama" class="form-control" name="nama" placeholder="Contoh: Wifi">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="foto_fasilitas">Foto</label>
+									<input type="file" id="foto_fasilitas" class="form-control" name="foto_fasilitas">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-group">
+									<label for="deskripsi">Deskripsi</label>
+									<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="col-12 d-flex justify-content-end">
+								<button type="submit" class="btn btn-primary me-1 mb-1">Simpan</button>
 								<button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
 							</div>
 						</div>

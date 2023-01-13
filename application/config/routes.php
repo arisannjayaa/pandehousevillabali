@@ -56,6 +56,7 @@ $route['kontakperson'] = 'KontakPerson/KontakPersonController/index';
 $route['villa/ketersediaan'] = 'Villa/VillaController/ketersediaan';
 $route['villa/data'] = 'Villa/VillaController/index';
 $route['villa/add'] = 'Villa/VillaController/create';
+$route['villa/fasilitas'] = 'Villa/FasilitasController/index';
 $route['pemesanan'] = 'Pemesanan/PemesananController/index';
 $route['dashboard'] = 'Dashboard/DashboardController/index';
 $route['default_controller'] = 'HomeController/index';

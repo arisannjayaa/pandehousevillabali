@@ -13,15 +13,13 @@
 	<link rel="stylesheet" href="<?= base_url('public/assets/css/pages/datatables.css') ?>">
 	<link rel="shortcut icon" href="<?= base_url('public/assets/images/logo/favicon.svg') ?>" type="image/x-icon" />
 	<link rel="shortcut icon" href="<?= base_url('public/assets/images/logo/favicon.png') ?>" type="image/png" />
-	<style>
-		/* * {
-			font-family: 'Poppins', sans-serif;
-			font-weight: 600;
-		} */
-	</style>
+	<link rel="stylesheet" href="<?= base_url('node_modules/filepond/dist/filepond.css') ?>">
+	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
+	<link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet" />
 </head>
 
 <body>
+	<script src="<?= base_url('public/assets/js/initTheme.js') ?>"></script>
 	<div id="app">
 		<div id="sidebar" class="active">
 			<div class="sidebar-wrapper active">
@@ -51,14 +49,17 @@
 								<span>Pemesanan</span>
 							</a>
 						</li>
-						<li class="sidebar-item has-sub <?= (uri_string() == 'villa/data' || uri_string() == 'villa/ketersediaan' || uri_string() == 'villa/add') ? 'active' : ''  ?>">
+						<li class="sidebar-item has-sub <?= (uri_string() == 'villa/data' || uri_string() == 'villa/ketersediaan' || uri_string() == 'villa/fasilitas') ? 'active' : ''  ?>">
 							<a href="<?= base_url('villa/data') ?>" class="sidebar-link">
 								<i class="bi bi-house-fill"></i>
 								<span>Villa</span>
 							</a>
-							<ul class="submenu <?= (uri_string() == 'villa/data') ? 'active' : '' ?>">
-								<li class="submenu-item">
+							<ul class="submenu <?= (uri_string() == 'villa/data' || uri_string() == 'villa/fasilitas' || uri_string() == 'villa/ketersediaan') ? 'active' : '' ?>">
+								<li class="submenu-item <?= (uri_string() == 'villa/data') ? 'active' : '' ?>">
 									<a href="<?= base_url('villa/data') ?>">Data Villa</a>
+								</li>
+								<li class="submenu-item <?= (uri_string() == 'villa/fasilitas') ? 'active' : '' ?>">
+									<a href="<?= base_url('villa/fasilitas') ?>">Fasilitas Villa</a>
 								</li>
 								<li class="submenu-item <?= (uri_string() == 'villa/ketersediaan') ? 'active' : '' ?>">
 									<a href="<?= base_url('villa/ketersediaan') ?>">Informasi Ketersediaan</a>
