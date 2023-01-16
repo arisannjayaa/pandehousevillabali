@@ -13,7 +13,7 @@ class DashboardController extends CI_Controller
 	{
 		$data = [
 			'title' => 'Dashboard',
-			'heading' => 'Dashboard',
+			'heading' => 'Daashboard',
 			'desc' => ''
 		];
 		$this->load->view('layouts/header', $data);
