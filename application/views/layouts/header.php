@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="<?= base_url('node_modules/filepond/dist/filepond.css') ?>">
 	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
 	<link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet" />
+	<link rel="stylesheet" href="<?= base_url('public/assets/extensions/sweetalert2/sweetalert2.min.css') ?>">
 </head>
 
 <body>
@@ -66,7 +67,7 @@
 								</li>
 							</ul>
 						</li>
-						<li class="sidebar-item <?= (uri_string() == 'kontakperson') ? 'active' : '' ?>">
+						<li class="sidebar-item <?= (uri_string() == 'kontakperson' || uri_string() == 'kontakperson/add') ? 'active' : '' ?>">
 							<a href="<?= base_url('kontakperson') ?>" class="sidebar-link">
 								<i class="bi bi-person-vcard-fill"></i>
 								<span>Kontak Person</span>
@@ -117,8 +118,8 @@
 												<p class="mb-0 text-sm text-gray-600">Administrator</p>
 											</div>
 											<div class="user-img d-flex align-items-center">
-												<div class="avatar avatar-md">
-													<img src="<?= base_url('') ?>public/assets/images/faces/1.jpg" />
+												<div class="avatar bg-primary me-3">
+													<span class="avatar-content">A</span>
 												</div>
 											</div>
 										</div>
