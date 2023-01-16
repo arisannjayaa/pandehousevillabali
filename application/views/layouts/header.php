@@ -17,6 +17,23 @@
 	<link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet" />
 	<link href="https://unpkg.com/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.css" rel="stylesheet" />
 	<link rel="stylesheet" href="<?= base_url('public/assets/extensions/sweetalert2/sweetalert2.min.css') ?>">
+	<style>
+		.initial-avatar {
+			/* Center the content */
+			align-items: center;
+			display: flex;
+			justify-content: center;
+
+			/* Colors */
+			background-color: #d1d5db;
+			color: #fff;
+
+			/* Rounded border */
+			border-radius: 50%;
+			height: 7rem;
+			width: 7rem;
+		}
+	</style>
 </head>
 
 <body>
@@ -82,13 +99,13 @@
 
 						<li class="sidebar-title">Akun</li>
 						<li class="sidebar-item <?= (uri_string() == 'profil') ? 'active' : '' ?>">
-							<a href="<?= base_url('') ?>" class="sidebar-link">
+							<a href="<?= base_url('profil') ?>" class="sidebar-link">
 								<i class="bi bi-file-earmark-person-fill"></i>
 								<span>Profil</span>
 							</a>
 						</li>
 						<li class="sidebar-item">
-							<a href="<?= base_url('') ?>" class="sidebar-link">
+							<a href="<?= base_url('logout') ?>" class="sidebar-link">
 								<i class="bi bi-door-open-fill"></i>
 								<span>Log out</span>
 							</a>
@@ -129,10 +146,7 @@
 											<h6 class="dropdown-header">Hello, Admin!</h6>
 										</li>
 										<li>
-											<a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> Profil Saya</a>
-										</li>
-										<li>
-											<a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i> Pengaturan</a>
+											<a class="dropdown-item" href="<?= base_url('profil') ?>"><i class="icon-mid bi bi-person me-2"></i> Profil Saya</a>
 										</li>
 										<li>
 											<hr class="dropdown-divider" />
@@ -159,7 +173,7 @@
 											</div>
 										</li>
 										<li>
-											<a class="dropdown-item" href="#"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Keluar</a>
+											<a class="dropdown-item" href="<?= base_url('logout') ?>"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Keluar</a>
 										</li>
 									</ul>
 								</div>

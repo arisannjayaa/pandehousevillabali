@@ -52,6 +52,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['register'] = 'Auth/RegisterController/index';
 $route['login'] = 'Auth/LoginController/index';
 $route['laporan'] = 'Laporan/LaporanController/index';
+$route['profil'] = 'Profil/ProfilController/index';
 $route['kontakperson/update'] = 'KontakPerson/KontakPersonController/update';
 $route['kontakperson/edit/(:any)'] = 'KontakPerson/KontakPersonController/edit/$1';
 $route['kontakperson/delete/(:any)'] = 'KontakPerson/KontakPersonController/destroy/$1';
