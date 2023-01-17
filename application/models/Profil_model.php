@@ -5,8 +5,8 @@ class Profil_model extends CI_Model
 {
 	public function select_id($id)
 	{
-		$query = $this->db->where('id_contact_person', $id);
-		$query = $this->db->get('contact_person')->result();
+		$query = $this->db->where('id_pemilik', $id);
+		$query = $this->db->get('pemilik')->result();
 		return $query;
 	}
 }

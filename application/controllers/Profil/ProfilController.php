@@ -8,7 +8,7 @@ class ProfilController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Profil_model');
-		$this->id_user = $this->session->userdata('item');
+		$this->id_user = $this->session->userdata('id_user');
 	}
 
 	public function index()
@@ -22,6 +22,14 @@ class ProfilController extends CI_Controller
 		$this->load->view('layouts/header', $data);
 		$this->load->view('profil/index', $data);
 		$this->load->view('layouts/footer');
+	}
+
+	public function update_profil()
+	{
+	}
+
+	public function update_sandi()
+	{
 	}
 }
 
