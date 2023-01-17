@@ -122,7 +122,7 @@
                <?php foreach ($gallery->result_array() as $gallery_data){ ?>
                <div class="col-md-3 col-sm-6">
                   <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/').$gallery_data['foto']; ?>" alt="#"/></figure>
+                     <img src="<?= base_url('public/template_user/images/').$gallery_data['foto']; ?>" alt="#"/>
                   </div>
                </div>
                <?php }?>

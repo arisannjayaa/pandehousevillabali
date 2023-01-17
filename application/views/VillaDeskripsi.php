@@ -137,8 +137,8 @@
                      <table class="table table-hover" >
                        <thead>
                          <tr>
-                           <th scope="col">Tanggal</th>
-                           <th scope="col">Status</th>
+                           <th scope="col" style="width: 50%;">Tanggal</th>
+                           <th scope="col" style="width: 50%;">Status</th>
                          </tr>
                        </thead>
                         <?php foreach ($ketersediaan->result_array() as $ketersediaan_data) : ?> 

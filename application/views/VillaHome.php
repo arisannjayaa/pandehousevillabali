@@ -66,7 +66,7 @@
                               </li>
                               <?php if ($this->session->userdata("tipe_user") == 'admin') { ?>
                                  <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo base_url('dashboard')?>">Admin</a>
+                                    <a class="nav-link" href="<?php echo base_url('AdminDashboard')?>">Admin</a>
                                  </li>
                               <?php }else{
 

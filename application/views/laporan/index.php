@@ -1,7 +1,7 @@
 <div class="row mb-3 gap-3 gap-lg-0">
 	<div class="col-12 col-lg">
 		<div class="form-floating">
-			<input type="month" class="form-control" id="dari" placeholder="" value="<?= date("Y-m") ?>" name="dari">
+			<input type="date" class="form-control" id="dari" placeholder="" value="<?= date("Y-m") ?>" name="dari">
 			<label for="dari">Pilih Bulan Tahun</label>
 		</div>
 	</div>

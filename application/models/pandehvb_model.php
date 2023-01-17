@@ -51,10 +51,36 @@ class pandehvb_model extends CI_Model {
         return $result;
     }
 
+    public function getSelectedFasilitas2($id)
+    {
+        $this->db->where('id_detail_villa', $id);
+        $result = $this->db->get('detail_villa');
+        return $result;
+    }
+
     public function getContactPerson()
     {
         $result = $this->db->get('contact_person');
         return $result;
+    }
+
+    public function getSelectedContactPerson($id)
+    {
+        $this->db->where('id_contact_person', $id);
+        $result = $this->db->get('contact_person');
+        return $result;
+    }
+
+    public function getTransaksi()
+    {
+        $this->db->select("id_transaksi, tipe_transaksi, tgl_checkin, tgl_checkout, waktu_transaksi, status_pesanan, customer.nama as nama_customer, villa.nama as nama_villa");
+        $this->db->from('transaksi');
+        $this->db->join('customer', 'transaksi.id_customer = customer.id_customer');
+        $this->db->join('villa', 'transaksi.id_villa = villa.id_villa');
+        $this->db->order_by('waktu_transaksi','desc');
+        $query = $this->db->get();
+        return $query;
+ 
     }
 
     public function getMetodePembayaran()
@@ -343,6 +369,109 @@ class pandehvb_model extends CI_Model {
 
         
     }
+
+    public function konfirmasiTransaksi($id)
+    {
+        
+        
+
+        $edit = array(
+            'status_pesanan' => 'Dikonfirmasi',
+            'status_pembayaran' => 'Dibayar'
+        );
+        $this->db->where('id_transaksi', $id);
+        $this->db->update('transaksi', $edit);
+
+        $this->db->where('id_transaksi', $id);
+        $result = $this->db->get('transaksi');
+        foreach ($result->result_array() as $row) {
+            $x= -1;
+                for ($i=0; $i < 8; $i--) { 
+                    $x= $x+1;
+
+                    $tgl_dari = $row['tgl_checkin'];
+                    $tgl_dari1 = strtotime($tgl_dari);
+                    $tgl_dari2 = date('Y-m-d', strtotime("+$x day", $tgl_dari1));
+
+                    $tgl_sampai = $row['tgl_checkout'];
+                    $tgl_sampai1 = date('Y-m-d', strtotime($tgl_sampai));
+                    
+                    if ($tgl_dari2 == $tgl_sampai1) {
+                            $i = 10;
+                    }
+                    $edit = array(
+                        'status' => 'Kosong'
+                    );
+                    
+
+                    $this->db->where('tanggal', $tgl_dari2);
+                    $this->db->where('id_villa', $row['id_villa']);
+                    $this->db->update('ketersediaan', $edit);
+
+                }
+
+        }  
+        return;  
+
+    }
+
+    public function batalkanTransaksi($id)
+    {
+        
+
+        $edit = array(
+            'status_pesanan' => 'Dibatalkan',
+            'status_pembayaran' => 'Dibatalkan'
+        );
+        $this->db->where('id_transaksi', $id);
+        $this->db->update('transaksi', $edit);
+
+        $this->db->where('id_transaksi', $id);
+        $result = $this->db->get('transaksi');
+        foreach ($result->result_array() as $row) {
+            $x= -1;
+                for ($i=0; $i < 8; $i--) { 
+                    $x= $x+1;
+
+                    $tgl_dari = $row['tgl_checkin'];
+                    $tgl_dari1 = strtotime($tgl_dari);
+                    $tgl_dari2 = date('Y-m-d', strtotime("+$x day", $tgl_dari1));
+
+                    $tgl_sampai = $row['tgl_checkout'];
+                    $tgl_sampai1 = date('Y-m-d', strtotime($tgl_sampai));
+                    
+                    if ($tgl_dari2 == $tgl_sampai1) {
+                            $i = 10;
+                    }
+                    $edit = array(
+                        'status' => 'Tersedia'
+                    );
+                    
+
+                    $this->db->where('tanggal', $tgl_dari2);
+                    $this->db->where('id_villa', $row['id_villa']);
+                    $this->db->update('ketersediaan', $edit);
+
+                }
+
+        }   
+        return; 
+
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
