@@ -12,17 +12,27 @@ class AdminPemesanan extends CI_Controller
 
 	public function index()
 	{
+		if ($this->session->userdata("tipe_user") == 'admin') {
+			$data = [
+				'title' => 'Pemesanan',
+				'heading' => 'Pemesanan',
+				'desc' => ''
+			];
+			$data['transaksi'] = $this->pandehvb_model->getTransaksi();
+			$this->load->view('layouts/header', $data);
+			$this->load->view('pemesanan/index', $data);
+			$this->load->view('layouts/footer');
+			$this->session->unset_userdata('alert_home');
+		}else{
+			$data_session = array(
+                'alert_home' => 'Harus login sebagai admin terlebih dahulu'
+                );
+ 
+            $this->session->set_userdata($data_session);
+            redirect(base_url("VillaHome/index"));
+		}
 		
-		$data = [
-			'title' => 'Pemesanan',
-			'heading' => 'Pemesanan',
-			'desc' => ''
-		];
-		$data['transaksi'] = $this->pandehvb_model->getTransaksi();
-		$this->load->view('layouts/header', $data);
-		$this->load->view('pemesanan/index', $data);
-		$this->load->view('layouts/footer');
-		$this->session->unset_userdata('alert_home');
+			
 	}
 
 	public function konfirmasiTransaksi($id)

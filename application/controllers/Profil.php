@@ -13,17 +13,32 @@ class Profil extends CI_Controller
 
 	public function index()
 	{
-        $data['profil'] =  $this->pandehvb_model->getSelectedProfil();
-		$this->load->view('profil', $data);
-        $this->session->unset_userdata('alert_home');
+        if ($this->session->userdata("tipe_user") == 'customer') {
+            $data['profil'] =  $this->pandehvb_model->getSelectedProfil();
+            $this->load->view('profil', $data);
+            $this->session->unset_userdata('alert_home');
+        }elseif ($this->session->userdata("tipe_user") == 'admin'){
+            $data['profil'] =  $this->pandehvb_model->getSelectedProfil2();
+            $this->load->view('profil', $data);
+            $this->session->unset_userdata('alert_home');
+        }
+        
         
 	}
 
     public function EditProfil()
     {
-        $data['profil'] =  $this->pandehvb_model->getSelectedProfil();
-        $this->load->view('profil2', $data);
-        $this->session->unset_userdata('alert_home');
+        if ($this->session->userdata("tipe_user") == 'customer') {
+            $data['profil'] =  $this->pandehvb_model->getSelectedProfil();
+            $this->load->view('profil2', $data);
+            $this->session->unset_userdata('alert_home');
+        }elseif ($this->session->userdata("tipe_user") == 'admin'){
+            $data['profil'] =  $this->pandehvb_model->getSelectedProfil2();
+            $this->load->view('profil2', $data);
+            $this->session->unset_userdata('alert_home');
+        }
+        
+
 
     }
 
@@ -70,8 +85,7 @@ class Profil extends CI_Controller
                 $edit = array(
                     'nama' => $nama,
                     'username' => $username,  
-                    'password' => sha1($password),
-                    'nomer_telepon' => $no_telp
+                    'password' => sha1($password)
                 );
                 $this->db->where('id_pemilik', $this->session->userdata("id_pemilik"));
                 $this->db->update('pemilik', $edit);

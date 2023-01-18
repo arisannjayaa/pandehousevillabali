@@ -16,7 +16,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="text" id="first-name" class="form-control" name="jenis_cp"
-                                                placeholder="Nama Fasilitas" value="<?php foreach ($kontak->result_array() as $kontak_data){
+                                                placeholder="Jenis Kontak" value="<?php foreach ($kontak->result_array() as $kontak_data){
                                                 echo $kontak_data['jenis_cp']; 
                                                 }?>"   required>
                                         </div>
@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="col-md-8 form-group">
                                             <input type="text" id="email-id" class="form-control" name="isi_cp"
-                                                placeholder="Deskripsi" value="<?php foreach ($kontak->result_array() as $kontak_data){
+                                                placeholder="Isi Kontak" value="<?php foreach ($kontak->result_array() as $kontak_data){
                                                 echo $kontak_data['isi_cp']; 
                                                 }?>"   required>
                                         </div>

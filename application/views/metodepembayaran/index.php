@@ -9,6 +9,9 @@
 	<div class="col">
 		<div class="card border border-1">
 			<div class="card-body">
+				<div class="d-flex justify-content-start mb-3">
+					<a href="<?= base_url('AdminMetodePembayaran/tambah') ?>"><button class="btn btn-primary">Tambah Data</button></a> 
+				</div>
 				<table class="table" id="table1">
 					<thead>
 						<tr>
@@ -32,8 +35,8 @@
 											<i class="bi bi-menu-down"></i>
 										</button>
 										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<a class="dropdown-item" href="<?php echo base_url('AdminPemesanan/konfirmasiTransaksi/').$metodepembayaran_data['id_metode_pembayaran'];?>"><i class="bi bi-check-square-fill text-primary"></i> Terima Pesanan</a>
-											<a class="dropdown-item" href="<?php echo base_url('AdminPemesanan/batalkanTransaksi/').$metodepembayaran_data['id_metode_pembayaran'];?>"><i class="bi bi-x-square-fill text-danger"></i> Batalkan Pesanan</a>
+											<a class="dropdown-item" href="<?php echo base_url('AdminMetodePembayaran/edit/').$metodepembayaran_data['id_metode_pembayaran'];?>"><i class="bi bi-check-square-fill text-primary"></i> Edit</a>
+											<a class="dropdown-item" href="<?php echo base_url('AdminMetodePembayaran/aksi_delete/').$metodepembayaran_data['id_metode_pembayaran'];?>"><i class="bi bi-x-square-fill text-danger"></i> Hapus</a>
 										</div>
 									</div>
 								</div>

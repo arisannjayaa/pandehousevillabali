@@ -12,28 +12,48 @@ class AdminContactPerson extends CI_Controller
 
 	public function index()
 	{
-		$data = [
-			'title' => 'Contact Person',
-			'heading' => 'Contact Person',
-			'desc' => ''
-		];
-		$data['contactperson'] =  $this->pandehvb_model->getContactPerson();
-		$this->load->view('layouts/header', $data);
-		$this->load->view('contactperson/index', $data);
-		$this->load->view('layouts/footer');
-		$this->session->unset_userdata('alert_home');
+		if ($this->session->userdata("tipe_user") == 'admin') {
+			$data = [
+				'title' => 'Contact Person',
+				'heading' => 'Contact Person',
+				'desc' => ''
+			];
+				$data['contactperson'] =  $this->pandehvb_model->getContactPerson();
+				$this->load->view('layouts/header', $data);
+				$this->load->view('contactperson/index', $data);
+				$this->load->view('layouts/footer');
+				$this->session->unset_userdata('alert_home');
+		}else{
+			$data_session = array(
+                'alert_home' => 'Harus login sebagai admin terlebih dahulu'
+                );
+ 
+            $this->session->set_userdata($data_session);
+            redirect(base_url("VillaHome/index"));
+		}
+			
 	}
 
 	public function tambah()
 	{
-		$data = [
-			'title' => 'Tambah Contact Person',
-			'heading' => 'Tambah Contact Person',
-			'desc' => ''
-		];
-		$this->load->view('layouts/header', $data);
-		$this->load->view('contactperson/contactperson_tambah', $data);
-		$this->load->view('layouts/footer');
+		if ($this->session->userdata("tipe_user") == 'admin') {
+			$data = [
+				'title' => 'Tambah Contact Person',
+				'heading' => 'Tambah Contact Person',
+				'desc' => ''
+			];
+			$this->load->view('layouts/header', $data);
+			$this->load->view('contactperson/contactperson_tambah', $data);
+			$this->load->view('layouts/footer');
+		}else{
+			$data_session = array(
+                'alert_home' => 'Harus login sebagai admin terlebih dahulu'
+                );
+ 
+            $this->session->set_userdata($data_session);
+            redirect(base_url("VillaHome/index"));
+		}
+			
 	}
 
 	public function aksi_tambah()
@@ -57,16 +77,26 @@ class AdminContactPerson extends CI_Controller
 
 	public function edit($id)
 	{
-		$data = [
-			'title' => 'Edit Contact Person',
-			'heading' => 'Edit Contact Person',
-			'desc' => ''
-		];
-		$data['id'] = $id;
-		$data['kontak'] =  $this->pandehvb_model->getSelectedContactPerson($id);
-		$this->load->view('layouts/header', $data);
-		$this->load->view('contactperson/contactperson_edit', $data);
-		$this->load->view('layouts/footer');
+		if ($this->session->userdata("tipe_user") == 'admin') {
+			$data = [
+				'title' => 'Edit Contact Person',
+				'heading' => 'Edit Contact Person',
+				'desc' => ''
+			];
+			$data['id'] = $id;
+			$data['kontak'] =  $this->pandehvb_model->getSelectedContactPerson($id);
+			$this->load->view('layouts/header', $data);
+			$this->load->view('contactperson/contactperson_edit', $data);
+			$this->load->view('layouts/footer');
+		}else{
+			$data_session = array(
+                'alert_home' => 'Harus login sebagai admin terlebih dahulu'
+                );
+ 
+            $this->session->set_userdata($data_session);
+            redirect(base_url("VillaHome/index"));
+		}
+			
 	}
 
 	public function aksi_edit()

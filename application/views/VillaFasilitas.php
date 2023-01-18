@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>keto</title>
+      <title>Pande House Villa Bali</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -67,11 +67,8 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="<?php echo base_url('VillaDeskripsi/index/').$id?>">Deskripsi</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="<?php echo base_url('VillaGallery/index/').$id?>">Gallery</a>
-                              </li>
                               <li class="nav-item active">
-                                 <a class="nav-link" href="<?php echo base_url('VillaFasilitas/index/').$id?>">Fasilitas</a>
+                                 <a class="nav-link" >Fasilitas</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="<?php echo base_url('VillaContactPerson/index/').$id?>">Contact Person</a>
@@ -136,8 +133,9 @@
                   </div>
                </div>
                <div class="col-md-7">
+                  <?php $img1 = base_url('uploads/fasilitas/').$fasilitas_data['foto']; ?>
                   <div class="about_img">
-                     <figure><img src="<?= base_url('public/template_user/images/').$fasilitas_data['foto'];?>" alt="#"/></figure>
+                     <figure><img src="<?php echo $img1.'?rand='.rand(1,2000); ?>" alt="#"/></figure>
                   </div>
                </div>
                <br><br><br>
@@ -149,276 +147,18 @@
          </div>
       </div>
       <!-- gallery -->
-      <div  class="gallery">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>gallery</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery1.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery2.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery3.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery4.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery5.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery6.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery7.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-3 col-sm-6">
-                  <div class="gallery_img">
-                     <figure><img src="<?= base_url('public/template_user/images/gallery8.jpg')?>" alt="#"/></figure>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end gallery -->
-      <!-- blog -->
-      <div  class="blog">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Blog</h2>
-                     <p>Lorem Ipsum available, but the majority have suffered </p>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog1.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog2.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="blog_box">
-                     <div class="blog_img">
-                        <figure><img src="<?= base_url('public/template_user/images/blog3.jpg')?>" alt="#"/></figure>
-                     </div>
-                     <div class="blog_room">
-                        <h3>Bed Room</h3>
-                        <span>The standard chunk </span>
-                        <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generatorsIf you are   </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end blog -->
-      <!--  contact -->
-      <div class="contact">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>Contact Us</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name">Message</textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               <div class="col-md-6">
-                  <div class="map_main">
-                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      
       <!-- end contact -->
       <!--  footer -->
       <footer>
          <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class=" col-md-4">
-                     <h3>Contact US</h3>
-                     <ul class="conta">
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
-                        <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
-                        <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-md-4">
-                     <h3>Menu Link</h3>
-                     <ul class="link_menu">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="about.html"> about</a></li>
-                        <li><a href="room.html">Our Room</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-md-4">
-                     <h3>News letter</h3>
-                     <form class="bottom_form">
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form>
-                     <ul class="social_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
                         
                         <p>
-                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
-                        <br><br>
-                        Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                        </p>
+                        © 2023 SIP Kelompok 5 Yoi</p>
 
                      </div>
                   </div>

@@ -29,9 +29,18 @@ class pandehvb_model extends CI_Model {
         return $result;
     }
 
+    public function getSelectedProfil2()
+    {
+        $this->db->where('id_pemilik', 1);
+        $result = $this->db->get('pemilik');
+        return $result;
+    }
+
     public function getSelectedKetersediaan($id)
     {
+        $tgl_now = date('Y-m-d');
         $this->db->where('id_villa', $id);
+        $this->db->where('tanggal >=', $tgl_now);
         $this->db->order_by('tanggal','asc');
         $result = $this->db->get('ketersediaan');
         return $result;
@@ -85,6 +94,13 @@ class pandehvb_model extends CI_Model {
 
     public function getMetodePembayaran()
     {
+        $result = $this->db->get('metode_pembayaran');
+        return $result;
+    }
+
+    public function getSelectedMetodePembayaran($id)
+    {
+        $this->db->where('id_metode_pembayaran', $id);
         $result = $this->db->get('metode_pembayaran');
         return $result;
     }

@@ -1,7 +1,8 @@
-<div class="row mb-3 gap-3 gap-lg-0">
+<form class="form form-horizontal" action="<?php echo base_url('AdminLaporan/cetakLaporan')?>" method="post" enctype="multipart/form-data">
+	<div class="row mb-3 gap-3 gap-lg-0">
 	<div class="col-12 col-lg">
 		<div class="form-floating">
-			<input type="date" class="form-control" id="dari" placeholder="" value="<?= date("Y-m") ?>" name="dari">
+			<input type="month" class="form-control" id="dari" placeholder="" value="<?= date("Y-m") ?>" name="date">
 			<label for="dari">Pilih Bulan Tahun</label>
 		</div>
 	</div>
@@ -9,31 +10,5 @@
 		<button type="submit" id="print" class="btn btn-primary"><i class="bi bi-printer-fill"></i></button>
 	</div>
 </div>
-<div class="row">
-	<div class="col">
-		<div class="card border border-1">
-			<div class="card-body">
-				<table class="table" id="table1">
-					<thead>
-						<tr>
-							<th>No Transaksi</th>
-							<th>Nama Villa</th>
-							<th>Check-In</th>
-							<th>Check-out</th>
-							<th>Jumlah</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-</div>
+</form>
+

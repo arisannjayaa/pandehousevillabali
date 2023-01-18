@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>keto</title>
+      <title>Pande House Villa Bali</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -66,13 +66,10 @@
                                  <a class="nav-link" href="<?php echo base_url('VillaDeskripsi/index/').$id?>">Deskripsi</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="<?php echo base_url('VillaGallery/index/').$id?>">Gallery</a>
-                              </li>
-                              <li class="nav-item">
                                  <a class="nav-link" href="<?php echo base_url('VillaFasilitas/index/').$id?>">Fasilitas</a>
                               </li>
                               <li class="nav-item active">
-                                 <a class="nav-link" href="<?php echo base_url('VillaContactPerson/index/').$id?>">Contact Person</a>
+                                 <a class="nav-link" >Contact Person</a>
                               </li>
                            </ul>
                         </div>
@@ -118,10 +115,7 @@
                      <div class="col-md-10 offset-md-1">
                         
                         <p>
-                        © 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a>
-                        <br><br>
-                        Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                        </p>
+                        © 2023 SIP Kelompok 5 Yoi</p>
 
                      </div>
                   </div>
